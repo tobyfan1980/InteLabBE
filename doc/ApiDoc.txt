@@ -1,0 +1,466 @@
+http://inmycars.ihengtian.top/
+
+
+http://inmycars.ihengtian.top/api/rest/firm/device?deviceId=101
+
+
+  http://inmycars.ihengtian.top/api/rest/login?name=yll&verify=123
+  http://inmycars.ihengtian.top/api/rest/firm/buildings
+
+GET��/api/rest/firm/buildings/{name}
+��Σ�{
+    name:�û���¼��
+}
+����:{
+{
+    "error": 0,					
+    "message": "OK",
+    "data": {
+        "id": 1,				¥��ID
+        "background": "XXXXXX",			¥���ֲ�����
+        "deviceNum": 50,			¥���豸����
+        "alterNum": 0,				��������
+        "list": 
+            {
+                "id": 1,			¥��ID
+                "name": "101",			©����
+                "xpoint": 350,			¥��������
+                "ypoint": 400,			¥��������
+                "deviceNum": 30,		�豸����
+                "createDate": 1467972375000	����ʱ��
+            },
+            {
+                "id": 2,
+                "name": "102",
+                "xpoint": 600,
+                "ypoint": 400,
+                "deviceNum": 20,
+                "createDate": 1468145194000
+            }
+        ]
+    }
+
+
+GET��/api/rest/firm/floors?buildId=
+��Σ�{
+buildId          					����¥��ID
+}
+����
+{
+{
+    "error": 0,
+    "message": "OK",
+    "data": {
+ 	"id": 1,					¥��ID
+        "devcieNum": 30,				¥���豸����
+        "alertNum": 0,					¥�㱨������
+        "floors": [
+            {
+                "id": 401,				¥��ID			
+                "num": 4,				¥����
+                "name": "2F",				¥����
+                "deviceNum": 30,			¥���豸��
+                "createDate": 1467885710000		����ʱ��
+            }
+        ]
+    }
+}
+}
+
+GET: /api/rest/firm/rooms?floorId=
+���:{
+floorId					����¥��ID
+}
+����
+{
+    "error": 0,
+    "message": "OK",
+    "data": {
+        "id": 401,				¥����
+        "deviceNum": 4,				¥���豸����
+        "alertNum": 0,				¥�㱨������
+        "roomList": [
+            {
+                "id": 201,			¥�㷿��ID
+                "name": "201",			¥�㷿����
+                "xPoint": 350,			����X����
+                "yPoint": 400,			����Y����
+                "deviceNum": 4,			�����豸����
+                "createDate": 1467625652000	����ʱ��
+            }
+        ]
+    }
+}
+
+GET��/api/rest/firm/devices?roomId=
+��Σ�{
+roomId =201                        ����ID
+}
+���ͣ�{
+{
+    "error": 0,
+    "message": "OK",
+    "data": {
+        "id": 201,
+        "alterNum": 0,
+        "deviceList": [                                         �豸�б�
+            {
+                "id": 101,
+                "code": "777",
+                "deviceType": {
+                    "id": 1,
+                    "name": "��ϸ���䶳",
+                    "logo": "XXXXXXX",
+                    "inspectTypes": [
+                        {
+                            "id": 1,
+                            "name": "r9",
+                            "code": "111"
+                        }
+                    ]
+                },
+                "createDate": 1467799007000,
+                "creator": "���ı�Ƶ����",
+                "purchase": 1468835839000,
+                "photo": "logos1",
+                "manager": {
+                    "id": 2,
+                    "name": "sss",
+                    "userName": "sss",
+                    "mobile": "999",
+                    "telephone": "999",
+                    "headIcon": "logo2",
+                    "createDate": 1468489552000,
+                    "gender": "��",
+                    "email": "111",
+                    "department": "�з���",
+                    "job": "�з�����"
+                },
+                "alterNum": 4,
+                "maintain": "ÿ��",
+                "maintainDate": 1468749451000,
+                "maintainAlterDays": 3,
+                "deviceFloors": [
+                    {
+                        "id": 2,
+                        "floorNum": 3,
+                        "name": "zzzzz",
+                        "num": 20
+                    }
+                ],
+                "deviceInspects": [
+                    {
+                        "id": 1,
+                        "inspectType": {				������
+                            "id": 1,
+                            "name": "r9",
+                            "code": "111"
+                        },
+                        "standard": 25,
+                        "lowUp": 2,                             �ͼ���������
+                        "lowDown": 5,                           �ͼ���������
+                        "highUp": 2,                            �߼���������
+                        "highDown": 5,                          �߼���������
+                        "lowAlter": 3                           �ͼ�����֪ͨ�����˴���
+                    }
+                ],
+                "files": [
+                    {
+                        "id": 1,
+                        "url": "d:/123.txt",
+                        "type": "�ı��ĵ�",
+                        "description": "��¼������Ϣ",
+                        "createDate": 1468835790000
+                    }
+                ]
+            }
+        ]
+    }
+}
+}
+
+
+
+GET��/api/rest/firm/device?deviceId=
+��Σ�{
+deviceId					�����豸ID
+}
+����
+{
+    "error": 0,
+    "message": "OK",
+    "data": {
+        "id": 101,
+        "code": "777",
+        "deviceType": {
+            "id": 1,
+            "name": "��ϸ���䶳",
+            "logo": "XXXXXXX",
+            "inspectTypes": [
+                {
+                    "id": 1,
+                    "name": "r9",
+                    "code": "111"
+                }
+            ]
+        },
+        "createDate": 1467799007000,
+        "creator": "���ı�Ƶ����",
+        "purchase": 1468835839000,
+        "photo": "logos1",
+        "manager": {
+            "id": 2,
+            "name": "sss",
+            "userName": "sss",
+            "mobile": "999",
+            "telephone": "999",
+            "headIcon": "logo2",
+            "createDate": 1468489552000,
+            "gender": "��",
+            "email": "111",
+            "department": "�з���",
+            "job": "�з�����"
+        },
+        "alterNum": 4,
+        "maintain": "ÿ��",
+        "maintainDate": 1468749451000,
+        "maintainAlterDays": 3,
+        "deviceFloors": [
+            {
+                "id": 2,
+                "floorNum": 3,
+                "name": "zzzzz",
+                "num": 20
+            }
+        ],
+        "deviceInspects": [
+            {
+                "id": 1,
+                "inspectType": {
+                    "id": 1,
+                    "name": "r9",
+                    "code": "111"
+                },
+                "standard": 25,
+                "lowUp": 2,
+                "lowDown": 5,
+                "highUp": 2,
+                "highDown": 5,
+                "lowAlter": 3
+            }
+        ],
+        "files": [
+            {
+                "id": 1,
+                "url": "d:/123.txt",
+                "type": "�ı��ĵ�",
+                "description": "��¼������Ϣ",
+                "createDate": 1468835790000
+            }
+        ]
+    }
+}
+
+GET��/api/rest/firm/person/mine/info
+���Σ�{
+       "error": 0,
+       "message": "OK",
+       "data": {
+           "id": 1,
+           "name": "yll",
+           "userName": "ly",
+           "mobile": "13564368150",
+           "telephone": "13564368150",
+           "headIcon": "logo1",
+           "createDate": 1468562479000,
+           "gender": "��",
+           "email": "2222@qq.com",
+           "department": "������",
+           "job": "����ʦ"
+       }
+   }
+
+
+GET��/api/rest/firm/person/info/{userId}
+userId  Ҫ��ѯ���û�ID
+���ͣ�{
+          "error": 0,
+          "message": "OK",
+          "data": {
+              "id": 1,
+              "name": "yll",
+              "userName": "ly",
+              "mobile": "13564368150",
+              "telephone": "13564368150",
+              "headIcon": "logo1",
+              "createDate": 1468562479000,
+              "gender": "��",
+              "email": "2222@qq.com",
+              "department": "������",
+              "job": "����ʦ"
+          }
+      }
+
+GET��/api/rest/firm/device/types
+���Σ�{
+       "error": 0,
+       "message": "OK",
+       "data": [
+           {
+               "id": 1,
+               "name": "��ϸ���䶳",
+               "logo": "XXXXXXX",
+               "inspectTypes": [
+                   {
+                       "id": 1,
+                       "name": "r9",
+                       "code": "111"
+                   }
+               ]
+           },
+           {
+               "id": 2,
+               "name": "ѪҺ����",
+               "logo": "ZZZZZZZZ",
+               "inspectTypes": [
+                   {
+                       "id": 1,
+                       "name": "r9",
+                       "code": "111"
+                   }
+               ]
+           },
+           {
+               "id": 3,
+               "name": "�𾯼��",
+               "logo": "CCCCCCC",
+               "inspectTypes": []
+           }
+       ]
+   }
+
+
+   GET��/api/rest/firm/employees?start=&limit=&userName=&mobile=
+   ��Σ�{
+   start        pageSize*pageNo
+   limit        pageNo
+   userName     �û�����
+   mobile       �ֻ���
+   }
+   ����
+   {
+       "error": 0,
+       "message": "OK",
+       "data": {
+           "total": "1",                                            ��ѯ����
+           "userList": {
+               "userId": 1,
+               "userList": [
+                   {
+                       "id": 3,
+                       "name": "candy",
+                       "userName": "Candy",
+                       "mobile": "5555",
+                       "telephone": "55555",
+                       "headIcon": "logo3",
+                       "createDate": 1468489557000,
+                       "gender": "Ů",
+                       "email": "333@qq.com",
+                       "department": "������",
+                       "job": "�����鳤"
+                   }
+               ]
+           },
+           "thisNum": "1"                                               ��������
+       }
+   }
+
+   GET��/api/rest/firm/manager/devices?start=&limit=&code=&name=&typeId=&userId
+   ��Σ�{
+   start        pageSize*pageNo
+   limit        pageNo
+   code         �豸���
+   typeId       �豸����ID
+   userId       ����ԱId�����Բ��Ĭ�ϵ�¼�˵ģ�
+   }
+
+   ���ͣ�{
+          "error": 0,
+          "message": "OK",
+          "data": {
+              "total": "1",
+              "devices": [
+                  {
+                      "id": 102,
+                      "code": "888",
+                      "deviceType": {
+                          "id": 2,
+                          "name": "ѪҺ����",
+                          "logo": "ZZZZZZZZ",
+                          "inspectTypes": [
+                              {
+                                  "id": 1,
+                                  "name": "r9",
+                                  "code": "111"
+                              }
+                          ]
+                      },
+                      "createDate": 1468317410000,
+                      "creator": "ĳ����",
+                      "purchase": 1468231422000,
+                      "photo": "logos2",
+                      "manager": {
+                          "id": 1,
+                          "name": "yll",
+                          "userName": "ly",
+                          "mobile": "13564368150",
+                          "telephone": "13564368150",
+                          "headIcon": "logo1",
+                          "createDate": 1468562479000,
+                          "gender": "��",
+                          "email": "2222@qq.com",
+                          "department": "������",
+                          "job": "����ʦ"
+                      },
+                      "alterNum": 3,
+                      "maintain": "ÿ��",
+                      "maintainDate": 1468144767000,
+                      "maintainAlterDays": 5,
+                      "deviceFloors": [
+                          {
+                              "id": 1,
+                              "floorNum": 2,
+                              "name": "sssss",
+                              "num": 12
+                          }
+                      ],
+                      "deviceInspects": [
+                          {
+                              "id": 2,
+                              "inspectType": {
+                                  "id": 2,
+                                  "name": "r10",
+                                  "code": "222"
+                              },
+                              "standard": 25,
+                              "lowUp": 3,
+                              "lowDown": 4,
+                              "highUp": 3,
+                              "highDown": 4,
+                              "lowAlter": 5
+                          }
+                      ],
+                      "files": [
+                          {
+                              "id": 2,
+                              "url": "c:/456.txt",
+                              "type": "�ı��ĵ�",
+                              "description": "��¼��Ʒ��Ϣ",
+                              "createDate": 1468490557000
+                          }
+                      ]
+                  }
+              ],
+              "thisNum": "1"
+          }
+      }
